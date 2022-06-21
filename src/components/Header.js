@@ -7,7 +7,7 @@ const Header = ({bestScore, score}) => {
             <div className="scores">
                 <ul className="scores">
                     <li><b>{score} Points</b></li>
-                    <li><b>Best Score {bestScore}</b></li>
+                    <li><b>Best Score {bestScore.sort(function(a, b){return b - a})[0]}</b></li>
                 </ul>
             </div>
         </div>
