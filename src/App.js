@@ -24,7 +24,7 @@ const App = () => {
   const [color, setColor] = useState("black");
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState([0]);
-  const arr = [];
+
   
   const handleClick = (e) => {
     shuffledGrid.forEach((card)=>{
@@ -36,15 +36,16 @@ const App = () => {
       };
       // eslint-disable-next-line eqeqeq
       if(e.target.id == card.id && card.clicks > 1){
-        arr.push(score)
-        arr.sort(function(a, b){return a - b})
+        
         setBestScore(
-          arr[0]
+          bestScore.concat(score)
         )
+
         alert(`You scored ${score} point(s). Try again ;D`)
         shuffledGrid.forEach((card)=>{
           card.clicks = 0;
         })
+
         setScore(0)
       }
     });    
