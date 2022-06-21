@@ -84,16 +84,25 @@ li {
   transition: 0.3s;
 }
 
-.mario-container:hover{
-  border: 5px solid #E60212;
-  box-sizing: border-box;
+
+@media screen and (min-width: 600px){
+  .mario-container:hover{
+    border: 5px solid #E60212;
+    box-sizing: border-box;
+  }
+
+  .mario-img {
+    opacity: 0.8;
+    transition: 0.2s;
+  }
 }
+
+
 
 .mario-img {
   width: 270px;
   height: 270px;
-  opacity: 0.8;
-  transition: 0.2s;
+  opacity: 1;
 }
 
 .mario-img:hover {
